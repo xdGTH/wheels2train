@@ -1,4 +1,5 @@
 #include "scene.h"
+#include <QKeyEvent>
 
 scene::scene()
 {
@@ -16,4 +17,15 @@ scene::scene()
     }
 
     addPixmap(*picture);
+    addItem(lcar);
+    addItem(rcar);
+}
+
+void scene::keyPressEvent(QKeyEvent *event)
+{
+    if(event->key()==Qt::Key_Left)
+        lcar->move();
+    if(event->key()==Qt::Key_Right)
+        rcar->move();
+
 }
