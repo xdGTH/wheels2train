@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include <QWidget>
+#include "scene.h"
 
 namespace Ui {//default
 class game;//default
@@ -17,6 +18,8 @@ public://default
 
 private://default
     Ui::game *ui;//default
+
+    scene * sc = new scene();
 };
 
 #endif // GAME_H
